@@ -1,19 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-int main(void) {
-/*Écrivez un programme C pour afficher un nombre entier à quatre chiffres dans l'ordre inverse sans utiliser de boucle. Par exemple, si le nombre entier est 1234, son inverse est 4321.*/
+int main() {
+  int num,d1,d2,d3,d4,d5,d6,inv;
+  printf("enter the 4 digit number :");
+  scanf("%d",&num);
+  d1 = num/10;
+  d2 = num%10;
+  d3 = d1/10;
+  d4 = d1%10;
+  d5 = d3/10;
+  d6 = d3%10;
+  inv = (d2*1000)+(d4*100)+(d6*10)+(d5*1);
+  printf("L'inverse du nombres est : %d",inv);
 
-  int N, inverse;
-  printf("enter un noumber entier : ");
-  scanf("%d",&N);
-  inverse = 0 ;
-  do {
-      inverse = (inverse * 10) + (N % 10);
-      N = N / 10 ;
-  }while (N != 0);
-  printf("L'inverse du nombres est : %d",inverse);
+
 
   return 0;
 }
